@@ -1,0 +1,22 @@
+{
+  "name": "solar-age",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "MJ <mdjacksonvideo@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/madjacks12/solar-age",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "moment": "^2.20.1"
+  }
+}
