@@ -14,6 +14,7 @@ let currentYear = parseInt((time.substring(6,10)));
     let userDay = parseInt((userAge.substring(8,10)));
     let newPerson = new Person(userYear, userMonth, userDay, currentYear, currentMonth, currentDay);
     newPerson.convertToSeconds();
+    let lifeExpectancy = $('#lifeExpectancy').val();
     console.log(newPerson.convertToMars());
 
   })

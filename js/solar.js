@@ -1,8 +1,9 @@
 export class Person {
-  constructor (userYear, userMonth, userDay, currentYear, currentMonth, currentDay) {
+  constructor (userYear, userMonth, userDay, userLifeExpectancy, currentYear, currentMonth, currentDay) {
     this.userDay = userDay;
     this.userMonth = userMonth;
     this.userYear = userYear;
+    this.userLifeExpectancy = userLifeExpectancy;
     this.currentYear = currentYear;
     this.currentMonth = currentMonth;
     this.currentDay = currentDay;
@@ -19,8 +20,14 @@ export class Person {
     return Math.round((currentDayTotalSeconds - userTotalSeconds)/year);
   }
 
+  calculateLifeExpectancy() {
+    let yearsLeft = this.userLifeExpectancy - this.convertToSeconds();
+
+    return yearsLeft;
+  }
+
   convertToMercury() {
-    let MercuryAge = parseFloat((this.convertToSeconds() / .24));
+    let MercuryAge = (this.convertToSeconds() / .24);
 
     return MercuryAge.toFixed(2);
   }
