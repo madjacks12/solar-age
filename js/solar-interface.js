@@ -13,6 +13,8 @@ let currentYear = parseInt((time.substring(6,10)));
     let userMonth = parseInt((userAge.substring(5,7)));
     let userDay = parseInt((userAge.substring(8,10)));
     let newPerson = new Person(userYear, userMonth, userDay, currentYear, currentMonth, currentDay);
+    newPerson.convertToSeconds();
+    console.log(newPerson.convertToMars());
 
   })
 })
