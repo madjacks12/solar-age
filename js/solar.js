@@ -32,11 +32,24 @@ export class Person {
     return MercuryAge.toFixed(2);
   }
 
+  mercuryYearsLeft() {
+    let mercuryExpectancy = (this.calculateLifeExpectancy() / .24);
+
+    return mercuryExpectancy.toFixed(2);
+  }
+
   convertToVenus() {
     let VenusAge = (this.convertToSeconds() / .62);
 
     return VenusAge.toFixed(2);
   }
+
+  venusYearsLeft() {
+    let venusExpectancy = (this.calculateLifeExpectancy() / .62);
+
+    return venusExpectancy.toFixed(2);
+  }
+
 
   convertToMars() {
     let MarsAge = (this.convertToSeconds() / 1.88);
@@ -44,10 +57,24 @@ export class Person {
     return MarsAge.toFixed(2);
   }
 
+  marsYearsLeft() {
+    let marsExpectancy = (this.calculateLifeExpectancy() / 1.88);
+
+    return marsExpectancy.toFixed(2);
+  }
+
+
   convertToJupiter() {
     let JupiterAge = (this.convertToSeconds() / 11.86);
 
     return JupiterAge.toFixed(2);
   }
+
+  jupiterYearsLeft() {
+    let jupiterExpectancy = (this.calculateLifeExpectancy() / 11.86);
+
+    return jupiterExpectancy.toFixed(2);
+  }
+
 
 };

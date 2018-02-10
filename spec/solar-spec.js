@@ -33,5 +33,29 @@ describe ('Person', function () {
     expect(testPerson.calculateLifeExpectancy()).toEqual(53);
   });
 
+  it('should return a persons years left to live on Mercury', function() {
+    let testPerson = new Person(1991, 3, 30, 80, 2018, 2, 9)
+    expect(testPerson.mercuryYearsLeft()).toEqual('220.83');
+  });
+
+  it('should return a persons years left to live on Venus', function() {
+    let testPerson = new Person(1991, 3, 30, 80, 2018, 2, 9)
+    expect(testPerson.venusYearsLeft()).toEqual('85.48');
+  });
+
+  it('should return a persons years left to live on Mars', function() {
+    let testPerson = new Person(1991, 3, 30, 80, 2018, 2, 9)
+    expect(testPerson.marsYearsLeft()).toEqual('28.19');
+  });
+
+  it('should return a persons years left to live on Jupiter', function() {
+    let testPerson = new Person(1991, 3, 30, 80, 2018, 2, 9)
+    expect(testPerson.jupiterYearsLeft()).toEqual('4.47');
+  });
+
+
+
+
+
 
 });
