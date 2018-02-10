@@ -20,9 +20,27 @@ export class Person {
   }
 
   convertToMercury() {
-    let MercuryAge = (this.convertToSeconds() / .24);
+    let MercuryAge = parseFloat((this.convertToSeconds() / .24));
 
-    return MercuryAge;
+    return MercuryAge.toFixed(2);
+  }
+
+  convertToVenus() {
+    let VenusAge = (this.convertToSeconds() / .62);
+
+    return VenusAge.toFixed(2);
+  }
+
+  convertToMars() {
+    let MarsAge = (this.convertToSeconds() / 1.88);
+
+    return MarsAge.toFixed(2);
+  }
+
+  convertToJupiter() {
+    let JupiterAge = (this.convertToSeconds() / 11.86);
+
+    return JupiterAge.toFixed(2);
   }
 
 };
