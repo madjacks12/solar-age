@@ -1,6 +1,5 @@
 # Solar-Age
 #### _By Matthew Jackson, 2/11/2018_
-=============================
 
 This webpage calculates your age and years left to live on Mercury, Venus, Mars and Jupiter based on user inputted date of birth and life expectancy.
 
