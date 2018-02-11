@@ -53,6 +53,11 @@ describe ('Person', function () {
     expect(testPerson.jupiterYearsLeft()).toEqual('4.47');
   });
 
+  it('should tell when a user has outlived their life expectancy', function() {
+    let testPerson = new Person(1991, 3, 30, 10, 2018, 2, 9)
+    expect(testPerson.jupiterYearsLeft()).toEqual("You've already exceeded your life expectancy!");
+  });
+
 
 
 
