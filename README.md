@@ -12,7 +12,7 @@ To run this webpage you will need to have Gulp and NodeJS installed on your comp
 1. `$git clone https://github.com/madjacks12/solar-age`
 2. Run `$ npm install` inside that directory.
 
-## userAge
+## Usage
 1. To start the browser syncing and file watching, just first run `$ gulp build` followed by  `$ gulp cssBuild`.
 **Note:** I am unsure if the development server is live reloading correctly.
 
