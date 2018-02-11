@@ -1,10 +1,10 @@
 import { Person } from './../js/solar.js';
 
 $(document).ready(function(){
-let time = moment(new Date()).format("DD/MM/YYYY")
-let currentDay = parseInt((time.substring(0,2)));
-let currentMonth = parseInt((time.substring(3,5)));
-let currentYear = parseInt((time.substring(6,10)));
+  let time = moment(new Date()).format("DD/MM/YYYY")
+  let currentDay = parseInt((time.substring(0,2)));
+  let currentMonth = parseInt((time.substring(3,5)));
+  let currentYear = parseInt((time.substring(6,10)));
   $('#age-form').submit(function(event){
     event.preventDefault();
     let userAge = $('#birthDate').val();
