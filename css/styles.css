@@ -1,0 +1,56 @@
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+}
+
+.jumbotron {
+   background: rgba(255, 255, 255, 0.4);
+   text-align: center;
+}
+
+body {
+  font-family: Helvetica;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+  background-image: url("../../img/Solar-system.jpg");
+  background-size:cover;
+}
+
+p {
+  color: rgba(215, 216, 111, 1);
+  text-shadow:-1px 2px 13px #000000;
+}
+
+label {
+  color: rgba(215, 216, 111, 1);
+  text-shadow:5px -1px 7px #000000;
+  background-color: rgba(215, 69, 173, 0.5);
+}
+
+#lifeExpectancy {
+  width: 218px;
+}
+
+#birthDate {
+  width: 218px;
+}
+
+form {
+width:227px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+button {
+text-align: center;
+width: 100px;
+position: relative; left: 20px;
+}
+
+h4 {
+  color: yellow;
+  text-shadow:5px -1px 7px #000000;
+}

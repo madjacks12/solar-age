@@ -34,7 +34,9 @@ export class Person {
 
   mercuryYearsLeft() {
     let mercuryExpectancy = (this.calculateLifeExpectancy() / .24);
-    if(this.convertToSeconds() < this.calculateLifeExpectancy()) {
+    if(this.convertToSeconds() < this.userLifeExpectancy) {
+      console.log(this.convertToSeconds());
+      console.log(this.calculateLifeExpectancy());
       return mercuryExpectancy.toFixed(2);
     }
     else {
@@ -50,7 +52,7 @@ export class Person {
 
   venusYearsLeft() {
     let venusExpectancy = (this.calculateLifeExpectancy() / .62);
-    if(this.convertToSeconds() < this.calculateLifeExpectancy()) {
+    if(this.convertToSeconds() < this.userLifeExpectancy) {
       return venusExpectancy.toFixed(2);
     }
     else {
@@ -67,7 +69,7 @@ export class Person {
 
   marsYearsLeft() {
     let marsExpectancy = (this.calculateLifeExpectancy() / 1.88);
-    if(this.convertToSeconds() < this.calculateLifeExpectancy()) {
+    if(this.convertToSeconds() < this.userLifeExpectancy) {
       return marsExpectancy.toFixed(2);
     }
       else {
@@ -84,7 +86,7 @@ export class Person {
 
   jupiterYearsLeft() {
     let jupiterExpectancy = (this.calculateLifeExpectancy() / 11.86);
-    if(this.convertToSeconds() < this.calculateLifeExpectancy()) {
+    if(this.convertToSeconds() < this.userLifeExpectancy) {
       return jupiterExpectancy.toFixed(2);
     }
     else {

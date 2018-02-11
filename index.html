@@ -5,24 +5,43 @@
     <title>Solar Age</title>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="build/js/app.js"></script>
+    <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body>
-    <h3 id="time"></h3>
-    <h1>When will you die on Mars?</h1>
-    <h4>Answers to this and other fun questions below.</h4>
-    <form id ="age-form">
-        <label>Please enter your age:</label>
-        <input type ="date" id ="birthDate"></input>
-        <br>
-        <label>At what age do you think you'll die?</label>
-        <input type ="number" id="lifeExpectancy"></input>
-        <button type="submit" class="btn btn-primary">GO</button>
-    </form>
-    <div id="age-results"></div>
-    <br>
-    <div id="expectancy-results"></div>
+    <div id="page-wrap">
+      <div class="jumbotron">
+        <h1 class="display-1">When will you die on Mars?</h1>
+        <p class ="lead">Answers to this and other fun questions below.</p>
+      </div>
+      <form id ="age-form">
+          <label>Please enter your date of birth:</label>
+          <input type ="date" id ="birthDate" value=""></input>
+          <br>
+          <br>
+          <label>At what age do you think you'll die?</label>
+          <input type ="number" id="lifeExpectancy"></input>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary">GO</button>
+      </form>
+      <div id="mercury-age-results"></div>
+      <br>
+      <div id="venus-age-results"></div>
+      <br>
+      <div id="mars-age-results"></div>
+      <br>
+      <div id="jupiter-age-results"></div>
+      <br>
+      <div id="mercury-expectancy-results"></div>
+      <br>
+      <div id="venus-expectancy-results"></div>
+      <br>
+      <div id="mars-expectancy-results"></div>
+      <br>
+      <div id="jupiter-expectancy-results"></div>
+      <br>
+
+  </div>
   </body>
 </html>

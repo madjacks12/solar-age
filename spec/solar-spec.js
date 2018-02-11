@@ -57,10 +57,4 @@ describe ('Person', function () {
     let testPerson = new Person(1991, 3, 30, 10, 2018, 2, 9)
     expect(testPerson.jupiterYearsLeft()).toEqual("You've already exceeded your life expectancy!");
   });
-
-
-
-
-
-
 });

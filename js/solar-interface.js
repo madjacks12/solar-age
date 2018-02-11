@@ -13,35 +13,46 @@ $(document).ready(function(){
     let userMonth = parseInt((userAge.substring(5,7)));
     let userDay = parseInt((userAge.substring(8,10)));
     let newPerson = new Person(userYear, userMonth, userDay, userLifeExpectancy, currentYear, currentMonth, currentDay);
-    console.log(newPerson.convertToSeconds());
+    console.log(userAge);
     //age on planets
-    $("#age-results").append("<h4>" + "You are " + newPerson.convertToMercury()  + " Years old on Mercury!"+ "<h4>" + "<br>");
+    if (!Date.parse(userAge)) {
+        $("mercury-#age-results").append("<h4>Please enter your birthDate<h4>");
+    } else {
+      $("#mercury-age-results").empty().append("<h4>" + "You are " + newPerson.convertToMercury()  + " Years old on Mercury!"+ "<h4>" + "<br>");
+    }
 
-    $("#age-results").append("<h4>" + "You are " + newPerson.convertToVenus()  + " Years old on Venus!"+ "<h4>" + "<br>");
+    if (userAge) {
+      $("#venus-age-results").empty().append("<h4>" + "You are " + newPerson.convertToVenus()  + " Years old on Venus!"+ "<h4>" + "<br>");
+    }
 
-    $("#age-results").append("<h4>" + "You are " + newPerson.convertToMars()  + " Years old on Mars!"+ "<h4>" + "<br>");
-
-    $("#age-results").append("<h4>" + "You are " + newPerson.convertToJupiter()  + " Years old on Jupiter!"+ "<h4>" + "<hr>" + "<br>");
+    if (userAge) {
+      $("#mars-age-results").empty().append("<h4>" + "You are " + newPerson.convertToMars()  + " Years old on Mars!"+ "<h4>" + "<br>");
+    }
+    if (userAge) {
+      $("#jupiter-age-results").empty().append("<h4>" + "You are " + newPerson.convertToJupiter()  + " Years old on Jupiter!"+ "<h4>" + "<hr>" + "<br>");
+    }
     // life expectancy
     if (newPerson.convertToSeconds() < userLifeExpectancy) {
-        $("#expectancy-results").append("<h4>" + "You have " + newPerson.mercuryYearsLeft()  + " Years to live before you die on Mercury!" + "<h4>" + "<br>");
-      } else {
-        $("#expectancy-results").append("<h4>You've already exceeded your life Expectancy!</h4>");
+        $("#mercury-expectancy-results").empty().append("<h4>" + "You have " + newPerson.mercuryYearsLeft()  + " Years to live before you die on Mercury!" + "<h4>" + "<br>");
+      } else if (newPerson.convertToSeconds() >= userLifeExpectancy){
+        $("#mercury-expectancy-results").empty().append("<h4>You've already exceeded your life Expectancy!</h4>");
       }
+      else {
+        $("#mercury-expectancy-results").empty().append("<h4>Please enter your life expectancy.</h4>");
+        }
     if (newPerson.convertToSeconds() < userLifeExpectancy) {
-          $("#expectancy-results").append("<h4>" + "You have " + newPerson.venusYearsLeft()  + " Years to live before you die on Venus!"+ "<h4>" + "<br>");
+          $("#venus-expectancy-results").empty().append("<h4>" + "You have " + newPerson.venusYearsLeft()  + " Years to live before you die on Venus!"+ "<h4>" + "<br>");
         } else {
         }
 
     if (newPerson.convertToSeconds() < userLifeExpectancy) {
-          $("#expectancy-results").append("<h4>" + "You have " + newPerson.marsYearsLeft()  + " Years to live before you die on Mars!"+ "<h4>" + "<br>");
+          $("#mars-expectancy-results").empty().append("<h4>" + "You have " + newPerson.marsYearsLeft()  + " Years to live before you die on Mars!"+ "<h4>" + "<br>");
     } else {
     }
 
   if (newPerson.convertToSeconds() < userLifeExpectancy) {
-        $("#expectancy-results").append("<h4>" + "You have " + newPerson.jupiterYearsLeft()  + " Years to live before you die on Jupiter!"+ "<h4>");
+        $("#jupiter-expectancy-results").empty().append("<h4>" + "You have " + newPerson.jupiterYearsLeft()  + " Years to live before you die on Jupiter!"+ "<h4>");
     } else {
     }
-
   });
 });
