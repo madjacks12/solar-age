@@ -16,6 +16,9 @@ To run this webpage you will need to have Gulp and NodeJS installed on your comp
 1. To start the browser syncing and file watching, just first run `$ gulp build` followed by  `$ gulp cssBuild`.
 **Note:** I am unsure if the development server is live reloading correctly.
 
+## Future development
+I would like to eventually add logic to display when a user's next birthday would be on a given planet. I would also like to put the results in a table so it doesn't look quite as messy as it is currently.
+
 ## Bugs
 
 The only known bug is that the error message intended to be displayed if a user does not enter a date of birth is not being displayed correctly. I believe this is because the placeholder Date value is not falsy, but also not a number.
